@@ -3,6 +3,7 @@
     <v-main>
       <AppHeader />
       <router-view />
+      <BottomNav />
     </v-main>
   </v-app>
 </template>

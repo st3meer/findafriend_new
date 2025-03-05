@@ -11,7 +11,28 @@ import { routes } from 'vue-router/auto-routes'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
+  routes: [
+    {
+      path: '/map',
+      name: 'Map',
+      component: () => import('../pages/map.vue')
+    },
+    {
+      path: '/friends',
+      name: 'Friends',
+      component: () => import('../pages/friends.vue')
+    },
+    {
+      path: '/events',
+      name: 'Events',
+      component: () => import('../pages/events.vue')
+    },
+    {
+      path: '/chats',
+      name: 'Chats',
+      component: () => import('../pages/chats.vue')
+    }
+  ],
 })
 
 // Workaround for https://github.com/vitejs/vite/issues/11804
